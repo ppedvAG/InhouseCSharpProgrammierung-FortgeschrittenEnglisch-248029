@@ -5,11 +5,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <StartupObject>Delegates.ActionFunc</StartupObject>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Using Include="System.Text" />
-    <Using Remove="System.Threading" />
-  </ItemGroup>
 </Project>

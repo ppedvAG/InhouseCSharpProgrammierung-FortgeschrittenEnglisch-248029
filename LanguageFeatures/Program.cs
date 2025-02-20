@@ -105,7 +105,57 @@ internal unsafe class Program
 
 		////////////////////////////////////////////////////////////////////////////
 		
-		//Interceptors
+		void Test2(params int[] x)
+		{
+
+		}
+
+		Test2(1, 2, 3);
+		Test2(1, 2, 3, 4, 5);
+		Test2(1);
+		Test2();
+
+		//ArrayTest at = new ArrayTest()
+		//{
+		//	Ints =
+		//	{
+		//		[^0] = 1,
+		//		[1] = 1,
+		//		[2] = 1,
+		//		[3] = 1
+		//	}
+		//};
+
+		Console.WriteLine(DateTime.Now > DateTime.MinValue);
+
+		double m = 234;
+		int k = (int) m; //explicit conversion
+
+		int n = 138;
+		double g = n; //implicit conversion
+
+
+		int[] test = new int[10]; //10 ints * 4 Byte = 40 Byte in Memory
+		string s1 = "Hello"; //Hello in Memory
+		string s2 = "World"; //World in Memory
+		s1 += s2; //Hello, World, HelloWorld in Memory
+
+
+		string complete = "";
+		for (int z = 0; z < 100; z++)
+		{
+			complete += z.ToString();
+			Console.WriteLine(complete);
+		}
+
+		Console.WriteLine("------------------------------------");
+
+		StringBuilder completeBuilder = new();
+		for (int z = 0; z < 100; z++)
+		{
+			completeBuilder.Append(z);
+		}
+		Console.WriteLine(completeBuilder.ToString());
 	}
 
 	static void Test(ref int x) => Console.WriteLine(x);
@@ -147,4 +197,9 @@ public interface Test
 		//...
 		//Bad Practice
 	}
+}
+
+public class ArrayTest
+{
+	public int[] Ints { get; set; }
 }
