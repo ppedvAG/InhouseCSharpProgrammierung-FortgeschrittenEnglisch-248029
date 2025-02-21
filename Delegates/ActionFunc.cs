@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace Delegates;
+﻿namespace Delegates;
 
 public class ActionFunc
 {
