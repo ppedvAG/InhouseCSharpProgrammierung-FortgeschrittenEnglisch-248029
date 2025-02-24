@@ -8,5 +8,6 @@
         Title="MainWindow" Height="450" Width="800">
 	<StackPanel>
 		<Button Content="Test" Click="Button_Click"/>
+		<ProgressBar IsIndeterminate="True" Height="50"/>
 	</StackPanel>
 </Window>

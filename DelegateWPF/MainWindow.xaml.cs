@@ -20,6 +20,22 @@ public partial class MainWindow : Window
 
 	private void Button_Click(object sender, RoutedEventArgs e)
 	{
+		Task t = new Task(Run);
+		t.Start();
 
+		t.Wait(); //Code stops right here
+				  //Instead of t.Wait() you should always use await
+
+		for (int i = 0; i < 100; i++)
+		{
+			Console.WriteLine($"Main Thread: {i}");
+		}
+	}
+
+	public void Run()
+	{
+		Console.WriteLine("Task started");
+		Thread.Sleep(3000);
+		Console.WriteLine("Task completed");
 	}
 }
